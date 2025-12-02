@@ -1,0 +1,5 @@
+{
+  "name": "NeonPath 3D",
+  "description": "A futuristic, stylized 3D map application allowing waypoint placement, route calculation, and free-roaming exploration with AI-powered route analysis.",
+  "requestFramePermissions": []
+}

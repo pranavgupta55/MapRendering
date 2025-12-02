@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>NeonPath 3D</title>
+    <script>
+      // Robust polyfill for process.env
+      if (typeof process === 'undefined') {
+        window.process = { env: {} };
+      } else if (!process.env) {
+        process.env = {};
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up { animation: fade-in-up 0.3s ease-out forwards; }
+      
+      .preserve-3d { transform-style: preserve-3d; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.454.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-950 text-white overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
