@@ -76,7 +76,7 @@ const App: React.FC = () => {
     // 5. Load Script
     const script = document.createElement('script');
     // Added libraries=geometry for distance calc in fallback mode
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${"AIzaSyD379uyrFw3aVWh3Y2ZFvrgMV13a0YZlf8"}&libraries=geometry,places&callback=initMapCallback&loading=async`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=geometry,places&callback=initMapCallback&loading=async`;
     script.async = true;
     script.defer = true;
     script.onerror = () => {
